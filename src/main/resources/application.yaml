@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: Exception-Handling-Demo
+
+api:
+  worldTime:
+    endpoint: http://worldtimeapi.org/api/ip
+  dateTimeFormat: "yyyy-MM-dd'T'HH:mm:ss.SSSSSSXXX"
+
