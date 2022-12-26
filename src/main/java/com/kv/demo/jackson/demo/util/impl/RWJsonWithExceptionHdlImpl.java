@@ -7,17 +7,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RWJJsonWithExceptionHdlImpl {
+public class RWJsonWithExceptionHdlImpl {
 
     private ObjectMapper objectMapper;
 
     @Autowired
-    public RWJJsonWithExceptionHdlImpl(ObjectMapper objectMapper) {
+    public RWJsonWithExceptionHdlImpl(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
     }
 
-    public <T> String writeValue(T t) {
-        return WriteJsonWithExceptionHdl.write(objectMapper::writeValueAsString, t);
+    public <T> String writeValue(T type) {
+        return WriteJsonWithExceptionHdl.write(objectMapper::writeValueAsString, type);
     }
 
 
