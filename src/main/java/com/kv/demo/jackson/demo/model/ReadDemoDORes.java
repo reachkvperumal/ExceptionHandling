@@ -14,35 +14,30 @@ public class ReadDemoDORes implements Serializable {
     private String eventName;
     private String eventId;
 
+    public ReadDemoDORes(String name, String accessKey, String eventName, String eventId) {
+        this.name = name;
+        this.accessKey = accessKey;
+        this.eventName = eventName;
+        this.eventId = eventId;
+    }
+
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getAccessKey() {
         return accessKey;
     }
 
-    public void setAccessKey(String accessKey) {
-        this.accessKey = accessKey;
-    }
 
     public String getEventName() {
         return eventName;
     }
 
-    public void setEventName(String eventName) {
-        this.eventName = eventName;
-    }
 
     public String getEventId() {
         return eventId;
     }
 
-    public void setEventId(String eventId) {
-        this.eventId = eventId;
-    }
 }
