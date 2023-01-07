@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Demo Generation
-  description: This is a sample API used to illustrate the tooling around an API-first approach.
+  description: Demo project Model generation.
   version: 1.0.0
   x-audience: moderate
   x-api-id: 58febb0f-49a1-48f1-a060-b3b1a615f465
