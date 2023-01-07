@@ -25,16 +25,7 @@
         <javax-annotation.version>1.3.2</javax-annotation.version>
         <sportbugs.version>4.7.3</sportbugs.version>
     </properties>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.openapitools</groupId>
-                <artifactId>openapi-generator-maven-plugin</artifactId>
-                <version>${open-api.verison}</version>
-                <scope>provided</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+
 
     <dependencies>
         <dependency>
