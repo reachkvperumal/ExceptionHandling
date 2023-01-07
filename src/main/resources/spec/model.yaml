@@ -1,0 +1,33 @@
+openapi: 3.0.1
+info:
+  title: Demo Generation
+  description: This is a sample API used to illustrate the tooling around an API-first approach.
+  version: 1.0.0
+  x-audience: moderate
+  x-api-id: 58febb0f-49a1-48f1-a060-b3b1a615f465
+  contact:
+    name: KV Perumal
+
+paths:
+  /:
+    put:
+      responses:
+        '200':
+          description: OK
+
+components:
+  schemas:
+    Account:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+    GetAccountsResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'
