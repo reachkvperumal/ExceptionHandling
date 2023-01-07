@@ -17,17 +17,30 @@ paths:
 
 components:
   schemas:
-    Account:
+    WriteDemoRes:
       type: object
-      required:
-        - name
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+
+    ReadDemoRes:
+      type: object
       properties:
         name:
           type: string
-    GetAccountsResponse:
+        accessKey:
+          type: string
+        eventName:
+          type: string
+        eventId:
+          type: string
+
+    DummyModel:
       type: object
       properties:
         items:
           type: array
           items:
-            $ref: '#/components/schemas/Account'
+            $ref: '#/components/schemas/WriteDemoRes'

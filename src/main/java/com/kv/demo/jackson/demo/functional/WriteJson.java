@@ -1,6 +1,6 @@
 package com.kv.demo.jackson.demo.functional;
 
-import com.kv.demo.jackson.demo.model.WriteDemoDORes;
+import com.kv.demo.jackson.demo.model.WriteDemoResDO;
 import com.kv.demo.jackson.demo.util.impl.RWJsonWithExceptionHdlImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ public class WriteJson {
     private RWJsonWithExceptionHdlImpl rwjJsonWithExceptionHdl;
 
     public String apply() {
-        WriteDemoDORes res = new WriteDemoDORes();
+        WriteDemoResDO res = new WriteDemoResDO();
         res.setFirstName("Demo");
         res.setLastName("Application");
         return rwjJsonWithExceptionHdl.writeValue(res);

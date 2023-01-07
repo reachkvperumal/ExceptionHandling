@@ -4,8 +4,8 @@ import com.kv.demo.jackson.demo.client.WorldTimeSvc;
 import com.kv.demo.jackson.demo.functional.ReadJson;
 import com.kv.demo.jackson.demo.functional.WriteJson;
 import com.kv.demo.jackson.demo.model.DateTimeDO;
-import com.kv.demo.jackson.demo.model.ReadDemoDORes;
-import com.kv.demo.jackson.demo.model.WriteDemoDORes;
+import com.kv.demo.jackson.demo.model.ReadDemoResDO;
+import com.kv.demo.jackson.demo.model.WriteDemoResDO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,7 +32,7 @@ public class DemoController {
     }
 
     @GetMapping(value = "/read", produces = "application/json")
-    public ReadDemoDORes read() {
+    public ReadDemoResDO read() {
         return readJson.apply();
     }
 
@@ -42,7 +42,7 @@ public class DemoController {
     }
 
     @GetMapping(value = "/exception", produces = "application/json")
-    public WriteDemoDORes exception() {
+    public WriteDemoResDO exception() {
         log.info("Exception execution...");
         return readJson.exp();
     }

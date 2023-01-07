@@ -1,8 +1,8 @@
 package com.kv.demo.jackson.demo.functional;
 
 import com.kv.demo.jackson.demo.client.WorldTimeSvc;
-import com.kv.demo.jackson.demo.model.ReadDemoDORes;
-import com.kv.demo.jackson.demo.model.WriteDemoDORes;
+import com.kv.demo.jackson.demo.model.ReadDemoResDO;
+import com.kv.demo.jackson.demo.model.WriteDemoResDO;
 import com.kv.demo.jackson.demo.util.impl.RWJsonWithExceptionHdlImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,11 +16,11 @@ public class ReadJson {
     @Autowired
     private RWJsonWithExceptionHdlImpl rwjJsonWithExceptionHdl;
 
-    public ReadDemoDORes apply() {
-        return rwjJsonWithExceptionHdl.readValue(worldTimeSvc.getAsString(), ReadDemoDORes.class);
+    public ReadDemoResDO apply() {
+        return rwjJsonWithExceptionHdl.readValue(worldTimeSvc.getAsString(), ReadDemoResDO.class);
     }
 
-    public WriteDemoDORes exp() {
-        return rwjJsonWithExceptionHdl.readValue(worldTimeSvc.getAsString(), WriteDemoDORes.class);
+    public WriteDemoResDO exp() {
+        return rwjJsonWithExceptionHdl.readValue(worldTimeSvc.getAsString(), WriteDemoResDO.class);
     }
 }

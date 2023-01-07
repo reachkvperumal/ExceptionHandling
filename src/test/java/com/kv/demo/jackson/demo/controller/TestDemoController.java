@@ -5,7 +5,7 @@ import com.kv.demo.jackson.demo.exceptions.DemoAppJsonReadException;
 import com.kv.demo.jackson.demo.functional.ReadJson;
 import com.kv.demo.jackson.demo.functional.WriteJson;
 import com.kv.demo.jackson.demo.model.DateTimeDO;
-import com.kv.demo.jackson.demo.model.ReadDemoDORes;
+import com.kv.demo.jackson.demo.model.ReadDemoResDO;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -66,7 +66,7 @@ public class TestDemoController {
     @Test
     @DisplayName("/read")
     public void read() throws Exception {
-        when(readJson.apply()).thenReturn(new ReadDemoDORes("Azure", "AKIAJ6CJIOPQ2CS5Z76Q",
+        when(readJson.apply()).thenReturn(new ReadDemoResDO("Azure", "AKIAJ6CJIOPQ2CS5Z76Q",
                 "ListEndpoints", "3a03e3bb-026d-4826-a42c-5155d9622f8e"));
         this.mockMvc.perform(get(endpointPrefix + "/read")).andDo(print())
                 .andExpect(status().isOk())
