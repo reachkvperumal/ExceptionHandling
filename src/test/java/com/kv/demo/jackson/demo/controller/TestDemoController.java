@@ -66,8 +66,8 @@ public class TestDemoController {
     @Test
     @DisplayName("/read")
     public void read() throws Exception {
-        when(readJson.apply()).thenReturn(new ReadDemoResDO("Azure", "AKIAJ6CJIOPQ2CS5Z76Q",
-                "ListEndpoints", "3a03e3bb-026d-4826-a42c-5155d9622f8e"));
+        when(readJson.apply()).thenReturn(new ReadDemoResDO().name("Azure").accessKey("AKIAJ6CJIOPQ2CS5Z76Q")
+                .eventName("ListEndpoints").eventId("3a03e3bb-026d-4826-a42c-5155d9622f8e"));
         this.mockMvc.perform(get(endpointPrefix + "/read")).andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name").value("Azure"))

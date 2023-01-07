@@ -167,6 +167,7 @@
                             <generateApiTests>false</generateApiTests>
                             <generatorName>java</generatorName>
                             <generateModels>true</generateModels>
+                            <generateModelTests>false</generateModelTests>
                             <generateSupportingFiles>false</generateSupportingFiles>
                             <configOptions>
                                 <!--hideGenerationTimestamp>true</hideGenerationTimestamp-->
