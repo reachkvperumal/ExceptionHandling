@@ -3,8 +3,6 @@ info:
   title: Demo Generation
   description: Demo project Model generation.
   version: 1.0.0
-  x-audience: moderate
-  x-api-id: 58febb0f-49a1-48f1-a060-b3b1a615f465
   contact:
     name: KV Perumal
 

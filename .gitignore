@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+/docs/DummyModelDO.md
+/.openapi-generator/model.yaml-default.sha256
+/docs/ReadDemoResDO.md
+/docs/WriteDemoResDO.md
