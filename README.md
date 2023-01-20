@@ -19,8 +19,6 @@ The following guides illustrate how to use some features concretely:
 
 ### TYPESCRIPT STUB GENERATION
 
-### [Thanks to stefanwille - A Guide to OpenAPI Code Generation for TypeScript](https://www.stefanwille.com/2021/05/2021-05-30-openapi-code-generator-for-typescript)
-
 - Following command will generate ts object
 
 | Command                                                                                                                                                                | Description                                                                                                                     |
