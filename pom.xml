@@ -14,11 +14,11 @@
     <name>demo</name>
     <description>Demo project for converting checked to runtime exception Spring Boot</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
         <jacoco.version>0.8.8</jacoco.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <commons-io.version>2.11.0</commons-io.version>
-        <surefire.version>3.0.0-M7</surefire.version>
+        <surefire.version>3.0.0-M5</surefire.version>
         <open-api.verison>6.2.1</open-api.verison>
         <docui.version>1.6.14</docui.version>
         <swagger-annotation.version>1.6.9</swagger-annotation.version>
@@ -48,6 +48,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+            <version>1.18.30</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
@@ -103,6 +104,35 @@
     </dependencies>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.7.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.2.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>3.0.0-M1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M5</version>
+                </plugin>
+
+                <plugin>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
